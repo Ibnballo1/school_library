@@ -11,16 +11,16 @@ class Person
   private
   def is_of_age
     if age >= 18
-      return true
+      true
     else
-      return false
+      false
     end
   end
 
   # public method
   def can_use_services
     if age || parent_permission
-      return true
+      true
     end
   end
 
