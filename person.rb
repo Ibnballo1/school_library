@@ -4,7 +4,7 @@ class Person
   attr_accessor :name, :age
 
   # constructor
-  def initialize(age, name = 'unknown', parent_permission = true)
+  def initialize(age, name = 'unknown', parent_permission = true) # rubocop:disable Lint/UnusedMethodArgument
     @id = Random.rand(1..1000)
     @name = name
     @age = age
