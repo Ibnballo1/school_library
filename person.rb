@@ -1,10 +1,10 @@
 class Person
   # attribute accessor for getters and setters
-  attr_reader: id
+  attr_reader :id
   attr_accessor :id, :name, :age
 
   # constructor
-  def initialize(age, name = 'unknown', parent_permission = true) # rubocop:disable Lint/UnusedMethodArgument
+  def initialize(age, name = 'unknown', parent_permission = true)
     @id = Random.rand(1..1000)
     @name = name
     @age = age
