@@ -1,6 +1,4 @@
 require './nameable'
-require './capitalize_decorator'
-require './trimmer_decorator.rb'
 
 class Person < Nameable
   # attribute accessor for getters and setters
@@ -8,6 +6,7 @@ class Person < Nameable
 
   # constructor
   def initialize(age, name = 'unknown', parent_permission: true)
+    super()
     @id = Random.rand(1..1000)
     @name = name
     @age = age
@@ -15,7 +14,7 @@ class Person < Nameable
   end
 
   def correct_name
-    return @name
+    @name
   end
 
   # public method
@@ -31,10 +30,3 @@ class Person < Nameable
     return true if @age >= 18
   end
 end
-
-person = Person.new(22, 'maximilianus')
-person.correct_name
-capitalizedPerson = CapitalizeDecorator.new(person)
-capitalizedPerson.correct_name
-capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-capitalizedTrimmedPerson.correct_name
