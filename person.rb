@@ -1,5 +1,6 @@
 class Person
   # attribute accessor for getters and setters
+  attr_reader: id
   attr_accessor :id, :name, :age
 
   # constructor
