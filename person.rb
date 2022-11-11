@@ -2,15 +2,17 @@ class Person
   # attribute accessor for getters and setters
   attr_accessor :id, :name, :age
   # constructor
-  def initialize(name = "unknown", age, parent_permission)
+  def initialize(name = "unknown", age, parent_permission = true)
     @id = Random.rand(1..1000)
     @name= name
     @age = age
   end
   # private method
+
   private
+
   def is_of_age?
-    if @age >= 18
+    if age >= 18
       true
     else
       false
