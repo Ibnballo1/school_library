@@ -1,9 +1,10 @@
 class Person
   # attribute accessor for getters and setters
-  attr_accessor :id, :name, :age
+  attr_reader :id
+  attr_accessor :name, :age
 
   # constructor
-  def initialize(age, name = 'unknown', parent_permission: true)
+  def initialize(age, name = 'unknown', parent_permission = true)
     @id = Random.rand(1..1000)
     @name = name
     @age = age
