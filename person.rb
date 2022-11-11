@@ -9,7 +9,7 @@ class Person
   end
   # private method
   private
-  def is_of_age
+  def is_of_age?
     if age >= 18
       true
     else
@@ -18,7 +18,7 @@ class Person
   end
 
   # public method
-  def can_use_services
+  def can_use_services?
     if age || parent_permission
       true
     end
