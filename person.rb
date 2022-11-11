@@ -1,7 +1,7 @@
 class Person
   # attribute accessor for getters and setters
   attr_reader :id
-  attr_accessor :id, :name, :age
+  attr_accessor :name, :age
 
   # constructor
   def initialize(age, name = 'unknown', parent_permission = true)
