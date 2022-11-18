@@ -1,8 +1,8 @@
-require './person'
+require_relative 'person'
 
 class Teacher < Person
   attr_accessor :specialization
-  # constructor
+
   def initialize(*all, specialization)
     super(*all)
     @specialization = specialization
@@ -14,7 +14,7 @@ class Teacher < Person
     new(age, name, true, specialization)
   end
 
-  def can_use_services
+  def can_use_services?
     true
   end
 end
