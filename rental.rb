@@ -1,7 +1,7 @@
-require './person'
+require_relative '../entities/person'
 
 class Rental
-  attr_accessor :date, :book, :person
+  attr_accessor :date, :person, :book
 
   def initialize(date, book, person)
     @date = date
@@ -35,7 +35,7 @@ class Rental
   end
 
   def self.list_all_rentals_person_id(people, rentals)
-    Person.list_people(people)
+    Person.list_all_people(people)
     print 'Person ID: '
     person_id = gets.to_i
     puts(rentals.map do |rental|
