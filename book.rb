@@ -8,17 +8,16 @@ class Book
   end
 
   def self.create_book
-    print "Title: "
+    print 'Title: '
     title = gets.chomp
-    print "Author: "
+    print 'Author: '
     author = gets.chomp
     Book.new(title, author)
   end
 
-  def self.list_books(books)
+  def self.list_all_books(books)
     books.each do |book|
-      puts "Title: #{book.title}"
-      puts "Author: #{book.author}"
+      puts "Title: '#{book.title}' Author: #{book.author}"
     end
   end
 
