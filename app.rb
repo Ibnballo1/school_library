@@ -1,11 +1,11 @@
-require_relative './entities/book'
-require_relative './entities/teacher'
-require_relative './entities/student'
-require_relative './operations/rental'
-require_relative './entities/person'
+require_relative './book'
+require_relative './teacher'
+require_relative './student'
+require_relative './rental'
+require_relative './person'
 require 'json'
-require_relative './data/user_input'
-require_relative './data/user_output'
+require_relative './user_input'
+require_relative './user_output'
 
 class App
   def initialize()

@@ -19,9 +19,9 @@ class UserOutput
   end
 
   def self.load_books(books)
-    return books unless File.exist?('./data/books.json')
+    return books unless File.exist?('./books.json')
 
-    object = JSON.parse(File.read('./data/books.json'))
+    object = JSON.parse(File.read('./books.json'))
     object.each do |book|
       book = Book.new(book['title'], book['author'])
       books << book
@@ -29,9 +29,9 @@ class UserOutput
   end
 
   def self.load_rentals(rentals)
-    return rentals unless File.exist?('./data/rentals.json')
+    return rentals unless File.exist?('./rentals.json')
 
-    object = JSON.parse(File.read('./data/rentals.json'))
+    object = JSON.parse(File.read('./rentals.json'))
     object.each do |rental|
       rentals_json = Rental.new(rental['date'], rental['title'], rental['name'])
       rentals << rentals_json
