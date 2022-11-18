@@ -25,7 +25,7 @@ class UserInput
           }
         end
       people_json << person
-      File.write('./data/people.json', JSON.pretty_generate(people_json, { indent: "\t", object_nl: "\n" }))
+      File.write('./people.json', JSON.pretty_generate(people_json, { indent: "\t", object_nl: "\n" }))
     end
   end
 
